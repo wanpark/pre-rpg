@@ -25,5 +25,13 @@
       <Key>Gameplay.Todo</Key>
       <Value>なにか</Value>
     </Item>
+    <Item>
+      <Key>Command.Attack</Key>
+      <Value>こうげき</Value>
+    </Item>
+    <Item>
+      <Key>Command.Defence</Key>
+      <Value>まもる</Value>
+    </Item>
   </Asset>
 </XnaContent>

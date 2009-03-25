@@ -13,7 +13,7 @@ namespace Rpg
             : base(controllerManager)
         {
             Views = new List<View>();
-            foreach (View player in ViewManager.FieldPlayers)
+            foreach (View player in ViewManager.Players)
             {
                 Views.Add(player);
             }
@@ -22,7 +22,8 @@ namespace Rpg
 
         public override void Begin()
         {
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            ModelManager.ResetPlayerStatus();
+            foreach (PlayerView player in ViewManager.Players)
             {
                 player.Stop();
             }
@@ -37,7 +38,7 @@ namespace Rpg
 
         private void walk()
         {
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            foreach (PlayerView player in ViewManager.Players)
             {
                 player.Walk();
             }

@@ -27,6 +27,12 @@ namespace Rpg
             get { return screen.ScreenManager.SpriteBatch; }
         }
 
+        protected SpriteFont Font
+        {
+            get { return screen.ScreenManager.Font; }
+        }
+
+
         public View(GameScreen screen)
         {
             this.screen = screen;
@@ -38,6 +44,12 @@ namespace Rpg
 
         public virtual void Draw(GameTime gameTime)
         {
+        }
+
+
+        public string Message(string group, string name)
+        {
+            return screen.ScreenManager.Message(group, name);
         }
 
     }

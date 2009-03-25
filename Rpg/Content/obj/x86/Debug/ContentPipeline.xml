@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\MessageFont.xnb</Output>
-      <Time>2009-03-30T19:23:44.734375+09:00</Time>
+      <Time>2009-04-02T20:09:39.703125+09:00</Time>
     </Item>
     <Item>
       <Source>Message.xml</Source>
@@ -17,7 +17,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Message.xnb</Output>
-      <Time>2009-03-30T20:01:43.78125+09:00</Time>
+      <Time>2009-04-02T20:16:15.75+09:00</Time>
     </Item>
     <Item>
       <Source>MessageConfig.xml</Source>
@@ -29,11 +29,11 @@
       <Time>2009-03-30T17:55:44.625+09:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\MessageFont_0.xml</Key>
-        <Value>2009-03-30T19:23:48.453125+09:00</Value>
+        <Value>2009-04-02T20:09:42.6875+09:00</Value>
       </Dependency>
       <Dependency>
         <Key>obj\x86\Debug\Message_0.xml</Key>
-        <Value>2009-03-30T20:01:47.671875+09:00</Value>
+        <Value>2009-04-02T20:20:17.8125+09:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -41,14 +41,14 @@
       <Importer>FontDescriptionImporter</Importer>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\MessageFont_0.xml</Output>
-      <Time>2009-03-30T19:23:44.734375+09:00</Time>
+      <Time>2009-04-02T20:09:39.703125+09:00</Time>
     </Item>
     <Item>
       <Source>Message.xml</Source>
       <Importer>XmlImporter</Importer>
       <Options>IntermediateFile</Options>
       <Output>obj\x86\Debug\Message_0.xml</Output>
-      <Time>2009-03-30T20:01:43.78125+09:00</Time>
+      <Time>2009-04-02T20:16:15.75+09:00</Time>
     </Item>
     <Item>
       <Source>blank.png</Source>
@@ -175,6 +175,24 @@
       <Options>None</Options>
       <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\villager_female.xnb</Output>
       <Time>2009-04-02T15:07:20.625+09:00</Time>
+    </Item>
+    <Item>
+      <Source>command_frame.png</Source>
+      <Name>command_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\command_frame.xnb</Output>
+      <Time>2009-04-02T19:45:42.46875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>cursor.png</Source>
+      <Name>cursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\cursor.xnb</Output>
+      <Time>2009-04-02T20:22:41.453125+09:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

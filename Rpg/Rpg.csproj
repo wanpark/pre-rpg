@@ -89,8 +89,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CommandController.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\AttackCommand.cs" />
+    <Compile Include="Commands\DefenceCommand.cs" />
+    <Compile Include="Controllers\CommandSelectController.cs" />
     <Compile Include="Controllers\LeaveController.cs" />
+    <Compile Include="Controllers\CommandTargetSelectController.cs" />
+    <Compile Include="Controllers\CommandPerformController.cs" />
+    <Compile Include="Controllers\GameOverController.cs" />
+    <Compile Include="Controllers\EnemyCommandPerformController.cs" />
     <Compile Include="Jobs\Villager.cs" />
     <Compile Include="Views\AnimatedTexture.cs" />
     <Compile Include="Controllers\Controller.cs" />
@@ -128,7 +135,12 @@
     <Compile Include="Controllers\StandController.cs" />
     <Compile Include="Views\View.cs" />
     <Compile Include="Views\ViewManager.cs" />
+    <Compile Include="Views\BattlePlayerView.cs" />
+    <Compile Include="Views\CommandSelectView.cs" />
+    <Compile Include="Views\CommandTargetSelectView.cs" />
+    <Compile Include="Views\CommandEffectView.cs" />
     <Compile Include="Views\PlayerView.cs" />
+    <Compile Include="Views\CharacterView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

@@ -13,7 +13,7 @@ namespace Rpg
             : base(controllerManager)
         {
             Views = new List<View>();
-            foreach (View player in ViewManager.FieldPlayers)
+            foreach (View player in ViewManager.Players)
             {
                 Views.Add(player);
             }
@@ -28,7 +28,7 @@ namespace Rpg
 
         private void stop()
         {
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            foreach (PlayerView player in ViewManager.Players)
             {
                 player.Stop();
             }
@@ -48,8 +48,8 @@ namespace Rpg
 
         private void transform()
         {
-            ViewManager.FieldPlayers[0].TransformEnd += endTransformMovie;
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            ViewManager.Players[0].TransformEnd += endTransformMovie;
+            foreach (PlayerView player in ViewManager.Players)
             {
                 player.Transform();
             }
@@ -57,11 +57,12 @@ namespace Rpg
 
         private void endTransformMovie(object sender, EventArgs args)
         {
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            foreach (PlayerView player in ViewManager.Players)
             {
                 player.TransformEnd -= endTransformMovie;
             }
-            ControllerManager.Controller = new CommandController(ControllerManager);
+
+            ControllerManager.PerformNext();
         }
     }
 }

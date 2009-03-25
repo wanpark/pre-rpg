@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace Rpg
 {
 
-    class FieldPlayerView : View
+    class FieldPlayerView : CharacterView
     {
 
         const float WALK_TIME_PER_FRAME = 0.2f;
@@ -17,31 +17,22 @@ namespace Rpg
         const int WALK_FRAME = 4;
         const int VANISH_FRAME = 7;
 
-        public Player Player
-        {
-            get { return Player; }
-        }
-        Player player;
-
-        public Vector2 Position
-        {
-            get { return position; }
-        }
-        Vector2 position;
-
         AnimatedTexture walkTexture;
         AnimatedTexture vanishTexture;
         AnimatedTexture appearTexture;
         AnimatedTexture currentTexture;
 
+        public Player Player
+        {
+            get { return (Player)Character; }
+        }
+
         public event EventHandler TransformEnd;
         public event EventHandler AppearEnd;
 
-        public FieldPlayerView(Player player, GameScreen screen, Vector2 position) : base(screen)
+        public FieldPlayerView(Player player, GameScreen screen, Vector2 position)
+            : base(player, position, screen)
         {
-            this.player = player;
-            this.position = position;
-
             LoadContent();
         }
 
@@ -58,7 +49,7 @@ namespace Rpg
 
         private string assetName(string type)
         {
-            return "Characters/" + player.Name + "_" + type;
+            return "Characters/" + Player.Name + "_" + type;
         }
 
 
@@ -84,8 +75,14 @@ namespace Rpg
 
         private void onTransformEnd(object sender, EventArgs args)
         {
+            Stop();
             if (TransformEnd != null)
                 TransformEnd(this, args);
+        }
+
+        public bool IsTransforming()
+        {
+            return currentTexture == vanishTexture;
         }
 
         public void Appear()
@@ -97,8 +94,14 @@ namespace Rpg
 
         private void onAppearEnd(object sender, EventArgs args)
         {
+            Stop();
             if (AppearEnd != null)
                 AppearEnd(this, args);
+        }
+
+        public bool IsAppearing()
+        {
+            return currentTexture == appearTexture;
         }
 
         public override void Update(GameTime gameTime)
@@ -109,7 +112,7 @@ namespace Rpg
 
         public override void Draw(GameTime gameTime)
         {
-            currentTexture.DrawFrame(SpriteBatch, position);
+            currentTexture.DrawFrame(SpriteBatch, Position);
         }
 
     }

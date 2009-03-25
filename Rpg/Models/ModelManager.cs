@@ -5,18 +5,17 @@ using System.Text;
 
 namespace Rpg
 {
+
+    public enum Party
+    {
+        Players,
+        Enemies
+    }
+
     class ModelManager
     {
 
-        public static string[] PLAYER_NAMES;
-        public static string[] PLAYER_JOB_NAMES;
-
-        static ModelManager()
-        {
-            PLAYER_NAMES = new string[3] { "boy", "girl", "ninja" };
-            PLAYER_JOB_NAMES = new string[3] { "boy", "girl", "ninja" };
-        }
-
+        private Character performer;
 
         public List<Player> Players
         {
@@ -30,6 +29,19 @@ namespace Rpg
         }
         private List<Enemy> enemies;
 
+        public List<Character> Characters
+        {
+            get
+            {
+                List<Character> characters = new List<Character>();
+                foreach (Character player in players)
+                    characters.Add(player);
+                foreach (Character enemy in enemies)
+                    characters.Add(enemy);
+                return characters;
+            }
+        }
+
         public ModelManager()
         {
             players = new List<Player>();
@@ -38,6 +50,13 @@ namespace Rpg
             players.Add(new Player("ninja", Sex.Male, new Villager()));
         }
 
+        public void ResetPlayerStatus()
+        {
+            foreach (Player player in players)
+            {
+                player.ResetStatus();
+            }
+        }
 
         public List<Enemy> CreateEnemies()
         {
@@ -46,6 +65,44 @@ namespace Rpg
             enemies.Add(new Enemy(new Job("witch")));
             enemies.Add(new Enemy(new Job("witch")));
             return enemies;
+        }
+
+        public Character NextPerformer()
+        {
+            List<Character> characters = Characters;
+            int current = performer != null ? characters.IndexOf(performer) : characters.Count - 1;
+            for (int i = 1; i < characters.Count; i++)
+            {
+                Character character = characters[(current + i) % characters.Count];
+                if (character.Alive)
+                    return performer = character;
+            }
+            return null;
+        }
+
+        public void PerformCommand(Command command)
+        {
+            command.Target.Die();
+        }
+
+        public Command CreateEnemyCommand(Enemy enemy)
+        {
+            Command command = new AttackCommand(enemy);
+            command.Target = players.Find(delegate(Player player) { return player.Alive; });
+            return command;
+        }
+
+        public bool IsBattleEnd()
+        {
+            return IsWin() || IsLoose();
+        }
+        public bool IsWin()
+        {
+            return enemies.All(delegate(Enemy enemy) { return !enemy.Alive; });
+        }
+        public bool IsLoose()
+        {
+            return players.All(delegate(Player player) { return !player.Alive; });
         }
     }
 }

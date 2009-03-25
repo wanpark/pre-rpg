@@ -15,3 +15,5 @@ Content\Characters\boy_appear.xnb
 Content\Characters\girl_appear.xnb
 Content\Characters\ninja_appear.xnb
 Content\Jobs\villager_female.xnb
+Content\command_frame.xnb
+Content\cursor.xnb

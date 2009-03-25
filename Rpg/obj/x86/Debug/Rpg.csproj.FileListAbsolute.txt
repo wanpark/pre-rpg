@@ -25,3 +25,5 @@ C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\R
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\girl_appear.xnb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\ninja_appear.xnb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\villager_female.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\command_frame.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\cursor.xnb

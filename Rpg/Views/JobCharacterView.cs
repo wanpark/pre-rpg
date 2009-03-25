@@ -7,16 +7,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Rpg
 {
-    class JobCharacterView :View
+    class JobCharacterView :CharacterView
     {
-        private Character character;
-
-        public Vector2 Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
-        private Vector2 position;
 
         protected Texture2D Texture
         {
@@ -27,10 +19,8 @@ namespace Rpg
         private SpriteEffects mirroring;
 
         public JobCharacterView(Character character, GameScreen screen, Vector2 position, bool isMirrorTexture)
-            : base(screen)
+            : base(character, position, screen)
         {
-            this.character = character;
-            this.position = position;
             mirroring = isMirrorTexture ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 
             LoadContent();
@@ -38,12 +28,12 @@ namespace Rpg
 
         public void LoadContent()
         {
-            texture = Content.Load<Texture2D>(character.Job.TextureName(character.Sex));
+            texture = Content.Load<Texture2D>(Character.Job.TextureName(Character.Sex));
         }
 
         public override void Draw(GameTime gameTime)
         {
-            SpriteBatch.Draw(texture, position, null, Color.White,
+            SpriteBatch.Draw(texture, Position, null, Color.White,
                 0, new Vector2(texture.Width / 2, texture.Height), 1, mirroring, 0);
         }
 

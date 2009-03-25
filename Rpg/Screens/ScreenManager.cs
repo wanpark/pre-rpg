@@ -297,9 +297,9 @@ namespace Rpg
         }
 
 
-        public string Message(string screenName, string type)
+        public string Message(string group, string name)
         {
-            return xmlMessage.Messages[screenName + "." + type];
+            return xmlMessage.Messages[group + "." + name];
         }
 
 

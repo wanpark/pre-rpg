@@ -47,6 +47,7 @@ namespace Rpg
         public Controller(ControllerManager controllerManager)
         {
             this.controllerManager = controllerManager;
+            views = new List<View>();
         }
 
         public virtual void Begin() {}
@@ -54,7 +55,7 @@ namespace Rpg
         public virtual void HandleInput(InputState input) {}
 
 
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             foreach (View view in Views)
             {
@@ -62,7 +63,7 @@ namespace Rpg
             }
         }
 
-        public void Draw(GameTime gameTime)
+        public virtual void Draw(GameTime gameTime)
         {
             Screen.ScreenManager.GraphicsDevice.Clear(ClearOptions.Target, Color.White, 0, 0);
 

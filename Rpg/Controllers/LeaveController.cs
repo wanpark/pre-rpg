@@ -13,7 +13,7 @@ namespace Rpg
             : base(controllerManager)
         {
             Views = new List<View>();
-            foreach (View player in ViewManager.FieldPlayers)
+            foreach (View player in ViewManager.Players)
             {
                 Views.Add(player);
             }
@@ -21,20 +21,39 @@ namespace Rpg
 
         public override void Begin()
         {
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            // すでに全員変身が解けている時
+            if (ViewManager.Players.All(delegate (PlayerView view) {
+                return !view.IsTransformed() && !view.IsDetransformimg();
+            })) {
+                exit();
+                return;
+            }
+
+            foreach (PlayerView player in ViewManager.Players)
             {
-                player.Appear();
-                player.AppearEnd += appeared;
+                player.Detransform();
+                player.DetransformEnd += detransformed;
             }
         }
 
-        private void appeared(object sender, EventArgs args)
+        private void detransformed(object sender, EventArgs args)
         {
-            foreach (FieldPlayerView player in ViewManager.FieldPlayers)
+            if (ViewManager.Players.All(delegate(PlayerView view)
             {
-                player.Stop();
-                player.AppearEnd -= appeared;
+                return !view.IsTransformed() && !view.IsDetransformimg();
+            }))
+            {
+                foreach (PlayerView player in ViewManager.Players)
+                {
+                    player.Stop();
+                    player.DetransformEnd -= detransformed;
+                }
+                exit();
             }
+        }
+
+        private void exit()
+        {
             ControllerManager.Controller = new StandController(ControllerManager);
         }
     }

@@ -22,12 +22,6 @@ namespace Rpg
             get { return screen.ModelManager; }
         }
 
-        public List<FieldPlayerView> FieldPlayers
-        {
-            get { return fieldPlayers; }
-        }
-        private List<FieldPlayerView> fieldPlayers;
-
         public List<PlayerView> Players
         {
             get { return players; }
@@ -39,6 +33,19 @@ namespace Rpg
             get { return enemies; }
         }
         private List<EnemyView> enemies;
+
+        public List<CharacterView> Characters
+        {
+            get
+            {
+                List<CharacterView> characters = new List<CharacterView>();
+                foreach (CharacterView player in players)
+                    characters.Add(player);
+                foreach (CharacterView enemy in enemies)
+                    characters.Add(enemy);
+                return characters;
+            }
+        }
 
         public ForwardArrowView ForwardArrow
         {
@@ -55,17 +62,16 @@ namespace Rpg
         public void LoadContent()
         {
             CreatePlayers();
+            enemies = new List<EnemyView>();
             forwardArrow = new ForwardArrowView(Screen);
         }
 
         private void CreatePlayers()
-        {
-            fieldPlayers = new List<FieldPlayerView>();
+        {;
             players = new List<PlayerView>();
             int y = 100;
             foreach (Player player in ModelManager.Players)
             {
-                fieldPlayers.Add(new FieldPlayerView(player, Screen, new Vector2(320, y)));
                 players.Add(new PlayerView(player, Screen, new Vector2(320, y)));
                 y += 100;
             }
