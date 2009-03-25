@@ -13,26 +13,15 @@ namespace Rpg
     {
 
         private Command command;
-
         public CommandPerformController(ControllerManager controllerManager, Command command)
             : base(controllerManager)
         {
             this.command = command;
-
-            Views = new List<View>();
-            foreach (View view in ViewManager.Characters)
-            {
-                Views.Add(view);
-            }
-
-            CommandEffectView effect = new CommandEffectView(Screen, command, ViewManager);
-            effect.EffectEnd += effectEnd;
-            Views.Add(effect);
+            AddViews(ViewManager.Characters);
         }
 
-        private void effectEnd(object sender, EventArgs args)
+        public override void Begin()
         {
-            ((CommandEffectView)sender).EffectEnd -= effectEnd;
             ControllerManager.PerformCommand(command);
         }
 

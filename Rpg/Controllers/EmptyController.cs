@@ -11,7 +11,6 @@ namespace Rpg
         public EmptyController(ControllerManager manager)
             : base(manager)
         {
-            Views = new List<View>();
         }
 
     }

@@ -12,12 +12,8 @@ namespace Rpg
         public StandController(ControllerManager controllerManager)
             : base(controllerManager)
         {
-            Views = new List<View>();
-            foreach (View player in ViewManager.Players)
-            {
-                Views.Add(player);
-            }
-            Views.Add(ViewManager.ForwardArrow);
+            AddViews(ViewManager.Players);
+            Views.Add(new ForwardArrowView(Screen));
         }
 
         public override void Begin()

@@ -15,18 +15,25 @@ namespace Rpg
         }
         private Character character;
 
-        public virtual Vector2 Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
-        private Vector2 position;
-
         public CharacterView(Character character, Vector2 position, GameScreen screen)
-            : base(screen)
+            : base(screen, position)
         {
             this.character = character;
-            this.position = position;
+        }
+
+
+        // 点滅
+        const float BLINK_DURATION = 0.1f;
+
+        public virtual void Blink()
+        {
+            AddEffect(new BlinkEffect(BLINK_DURATION, this));
+        }
+
+
+        public override void Draw(GameTime gameTime)
+        {
+            base.Draw(gameTime);
         }
 
     }

@@ -78,5 +78,14 @@ namespace Rpg
             batch.End();
         }
 
+        public void AddViews<T>(List<T> views)
+            where T : View
+        {
+            foreach (T view in views)
+            {
+                Views.Add(view);
+            }
+        }
+
     }
 }

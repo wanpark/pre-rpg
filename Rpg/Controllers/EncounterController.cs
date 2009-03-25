@@ -2,28 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Xna.Framework.Input;
+using System.Reflection;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Rpg
 {
-    class EncounterController : Controller
+
+    class EncounterController : CoroutineController
     {
 
         public EncounterController(ControllerManager controllerManager)
             : base(controllerManager)
         {
-            Views = new List<View>();
-            foreach (View player in ViewManager.Players)
-            {
-                Views.Add(player);
-            }
+            AddViews(ViewManager.Players);
         }
 
-        public override void Begin()
+        public override IEnumerator<bool> UpdateCoroutine()
         {
-            Scheduler.Add(appearEnemy, 1.0f);
-            Scheduler.Add(stop, 1.0f);
-            Scheduler.Add(transform, 1.3f);
+            foreach (bool b in this.Sleep(1.0f)) yield return true;
+
+            appearEnemy();
+            stop();
+
+            foreach (bool b in this.Sleep(0.3f)) yield return true;
+
+            transform();
+
+            foreach (PlayerView player in ViewManager.Players)
+            {
+                if (!player.IsTransformed())
+                {
+                    Type type = typeof(PlayerView);
+                    foreach (bool b in this.WaitEvent(player, "TransformEnd")) yield return true;
+                }
+            }
+
+            ControllerManager.PerformNext();
         }
 
         private void stop()
@@ -48,21 +64,12 @@ namespace Rpg
 
         private void transform()
         {
-            ViewManager.Players[0].TransformEnd += endTransformMovie;
             foreach (PlayerView player in ViewManager.Players)
             {
                 player.Transform();
             }
         }
 
-        private void endTransformMovie(object sender, EventArgs args)
-        {
-            foreach (PlayerView player in ViewManager.Players)
-            {
-                player.TransformEnd -= endTransformMovie;
-            }
-
-            ControllerManager.PerformNext();
-        }
     }
+
 }

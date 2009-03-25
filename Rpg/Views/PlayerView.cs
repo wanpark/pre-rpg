@@ -112,9 +112,19 @@ namespace Rpg
             return currentView == fieldView && fieldView.IsAppearing();
         }
 
+        public bool IsDetransformed()
+        {
+            return currentView == fieldView && !fieldView.IsAppearing() && !fieldView.IsTransforming();
+        }
+
         private void onDied(object sender, EventArgs args)
         {
-            Detransform();
+            //Detransform();
+        }
+
+        public override void Blink()
+        {
+            currentView.Blink();
         }
 
     }

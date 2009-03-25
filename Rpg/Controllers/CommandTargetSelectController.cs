@@ -20,22 +20,10 @@ namespace Rpg
             this.command = command;
             this.commandSelectController = commandSelectController;
 
-            Views = new List<View>();
-            foreach (View player in ViewManager.Players)
-            {
-                Views.Add(player);
-            }
-            foreach (View enemy in ViewManager.Enemies)
-            {
-                Views.Add(enemy);
-            }
+            AddViews(ViewManager.Characters);
 
             selectView = new CommandTargetSelectView(Screen, ViewManager.Players, ViewManager.Enemies);
             Views.Add(selectView);
-        }
-
-        public override void Begin()
-        {
         }
 
         public override void HandleInput(InputState input)

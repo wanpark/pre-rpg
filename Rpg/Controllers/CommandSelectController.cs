@@ -10,22 +10,13 @@ namespace Rpg
     {
         private CommandSelectView selectView;
 
-        public CommandSelectController(ControllerManager controllerManager, Player targetPlayer)
+        public CommandSelectController(ControllerManager controllerManager, Player performer)
             : base(controllerManager)
         {
-            Views = new List<View>();
-            foreach (View view in ViewManager.Characters)
-            {
-                Views.Add(view);
-            }
+            AddViews(ViewManager.Characters);
 
-            PlayerView playerView = ViewManager.Players.Find(delegate(PlayerView view) { return view.Player == targetPlayer; });
-            selectView = new CommandSelectView(Screen, playerView);
+            selectView = new CommandSelectView(Screen, (PlayerView)ViewManager.ViewForCharacter(performer));
             Views.Add(selectView);
-        }
-
-        public override void Begin()
-        {
         }
 
         public override void HandleInput(InputState input)

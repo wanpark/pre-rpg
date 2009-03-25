@@ -22,7 +22,6 @@ namespace Rpg
             : base(character, position, screen)
         {
             mirroring = isMirrorTexture ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-
             LoadContent();
         }
 
@@ -33,8 +32,13 @@ namespace Rpg
 
         public override void Draw(GameTime gameTime)
         {
-            SpriteBatch.Draw(texture, Position, null, Color.White,
-                0, new Vector2(texture.Width / 2, texture.Height), 1, mirroring, 0);
+            if (!Visible) return;
+
+            if (Character.Alive)
+            {
+                SpriteBatch.Draw(texture, Position, null, Color.White,
+                    0, new Vector2(texture.Width / 2, texture.Height), 1, mirroring, 0);
+            }
         }
 
 

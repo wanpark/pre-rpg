@@ -13,21 +13,28 @@ namespace Rpg
 
         const float TIME_PER_FRAME = 0.1f;
 
-        private CharacterView target;
+        public Command Command
+        {
+            get { return command; }
+        }
+        private Command command;
+
+        private CharacterView characterView;
         private float elapsed;
         private Vector2 originPosition;
         private bool active;
 
         public event EventHandler EffectEnd;
 
-        public CommandEffectView(GameScreen screen, Command command, ViewManager viewManager)
+        public CommandEffectView(GameScreen screen, Command command, CharacterView characterView)
             : base(screen)
         {
-            target = viewManager.Characters.Find(delegate(CharacterView view) { return view.Character == command.Target; });
-            
-            originPosition = target.Position;
+            this.command = command;
+            this.characterView = characterView;
+
+            originPosition = characterView.Position;
             int diff = (command.Target is Player) ? 10 : -10;
-            target.Position = new Vector2(originPosition.X + diff, originPosition.Y);
+            characterView.Position = new Vector2(originPosition.X + diff, originPosition.Y);
             elapsed = 0;
             active = true;
         }
@@ -48,7 +55,7 @@ namespace Rpg
             }
             else if (elapsed >= TIME_PER_FRAME)
             {
-                target.Position = originPosition;
+                characterView.Position = originPosition;
             }
 
             base.Update(gameTime);

@@ -47,13 +47,6 @@ namespace Rpg
             }
         }
 
-        public ForwardArrowView ForwardArrow
-        {
-            get { return forwardArrow; }
-        }
-        private ForwardArrowView forwardArrow;
-
-
         public ViewManager(DanjonScreen screen)
         {
             this.screen = screen;
@@ -63,7 +56,6 @@ namespace Rpg
         {
             CreatePlayers();
             enemies = new List<EnemyView>();
-            forwardArrow = new ForwardArrowView(Screen);
         }
 
         private void CreatePlayers()
@@ -91,6 +83,12 @@ namespace Rpg
                 enemies.Add(new EnemyView(enemy, Screen, new Vector2(80, y)));
                 y += 100;
             }
+        }
+
+
+        public CharacterView ViewForCharacter(Character character)
+        {
+            return Characters.Find(delegate(CharacterView view) { return view.Character == character; });
         }
 
     }

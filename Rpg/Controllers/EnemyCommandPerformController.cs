@@ -13,42 +13,28 @@ namespace Rpg
     {
 
         private Command command;
+        private CommandSerifView serifView;
 
         public EnemyCommandPerformController(ControllerManager controllerManager, Enemy enemy)
             : base(controllerManager)
         {
             this.command = ModelManager.CreateEnemyCommand(enemy);
 
-            Views = new List<View>();
-            foreach (View view in ViewManager.Characters)
-            {
-                Views.Add(view);
-            }
-
-            Scheduler.Add(blink, 0.2f);
-            Scheduler.Add(doEffect, 0.5f);
+            AddViews(ViewManager.Characters);
         }
 
-        private void blink()
+        public override void  Begin()
         {
-            EnemyView view = ViewManager.Enemies.Find(delegate(EnemyView v)
-            {
-                return v.Character == command.Performer;
-            });
-            view.Blink();
+ 	        base.Begin();
+            Scheduler.Add(say, 0.2f);
+            Scheduler.Add(delegate() { ControllerManager.PerformCommand(command); }, 0.6f);
         }
 
-        private void doEffect()
+        private void say()
         {
-            CommandEffectView effect = new CommandEffectView(Screen, command, ViewManager);
-            effect.EffectEnd += effectEnd;
-            Views.Add(effect);
-        }
-
-        private void effectEnd(object sender, EventArgs args)
-        {
-            ((CommandEffectView)sender).EffectEnd -= effectEnd;
-            ControllerManager.PerformCommand(command);
+            EnemyView view = (EnemyView)ViewManager.ViewForCharacter(command.Performer);
+            serifView = new CommandSerifView(Screen, command, view);
+            Views.Add(serifView);
         }
 
     }

@@ -94,13 +94,13 @@ namespace Rpg
 
         public bool IsBattleEnd()
         {
-            return IsWin() || IsLoose();
+            return IsWin() || IsLose();
         }
         public bool IsWin()
         {
             return enemies.All(delegate(Enemy enemy) { return !enemy.Alive; });
         }
-        public bool IsLoose()
+        public bool IsLose()
         {
             return players.All(delegate(Player player) { return !player.Alive; });
         }

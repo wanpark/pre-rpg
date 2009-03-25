@@ -106,12 +106,18 @@ namespace Rpg
 
         public override void Update(GameTime gameTime)
         {
+            base.Update(gameTime);
+
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             currentTexture.UpdateFrame(elapsed);
         }
 
         public override void Draw(GameTime gameTime)
         {
+            if (!Visible) return;
+
+            base.Draw(gameTime);
+
             currentTexture.DrawFrame(SpriteBatch, Position);
         }
 

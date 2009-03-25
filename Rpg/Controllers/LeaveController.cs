@@ -6,55 +6,25 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Rpg
 {
-    class LeaveController : Controller
+    class LeaveController : CoroutineController
     {
 
         public LeaveController(ControllerManager controllerManager)
             : base(controllerManager)
         {
-            Views = new List<View>();
-            foreach (View player in ViewManager.Players)
-            {
-                Views.Add(player);
-            }
+            AddViews(ViewManager.Players);
         }
 
-        public override void Begin()
+        public override IEnumerator<bool> UpdateCoroutine()
         {
-            // すでに全員変身が解けている時
-            if (ViewManager.Players.All(delegate (PlayerView view) {
-                return !view.IsTransformed() && !view.IsDetransformimg();
-            })) {
-                exit();
-                return;
-            }
+            ViewManager.Players.ForEach(player => player.Detransform());
 
             foreach (PlayerView player in ViewManager.Players)
-            {
-                player.Detransform();
-                player.DetransformEnd += detransformed;
-            }
-        }
+                if (!player.IsDetransformed())
+                    foreach (bool b in this.WaitEvent(player, "DetransformEnd")) yield return true;
 
-        private void detransformed(object sender, EventArgs args)
-        {
-            if (ViewManager.Players.All(delegate(PlayerView view)
-            {
-                return !view.IsTransformed() && !view.IsDetransformimg();
-            }))
-            {
-                foreach (PlayerView player in ViewManager.Players)
-                {
-                    player.Stop();
-                    player.DetransformEnd -= detransformed;
-                }
-                exit();
-            }
-        }
-
-        private void exit()
-        {
             ControllerManager.Controller = new StandController(ControllerManager);
         }
+
     }
 }

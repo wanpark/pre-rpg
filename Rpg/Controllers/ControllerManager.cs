@@ -11,6 +11,7 @@ namespace Rpg
 
         public Controller Controller
         {
+            get { return controller; }
             set
             {
                 controller.End();
@@ -68,7 +69,19 @@ namespace Rpg
 
         public void PerformCommand(Command command)
         {
-            ModelManager.PerformCommand(command);
+            CommandEffectView effect = new CommandEffectView(Screen, command, ViewManager.ViewForCharacter(command.Target));
+            effect.EffectEnd += effectEnd;
+            controller.Views.Add(effect);
+
+            //ViewManager.ViewForCharacter(effect.Command.Performer).Blink();
+        }
+
+        private void effectEnd(object sender, EventArgs args)
+        {
+            CommandEffectView effect = (CommandEffectView)sender;
+            effect.EffectEnd -= effectEnd;
+
+            ModelManager.PerformCommand(effect.Command);
 
             // いろいろ判定
 
@@ -79,11 +92,14 @@ namespace Rpg
                     Scheduler.Add(delegate()
                     {
                         Controller = new LeaveController(this);
-                    }, 0.5f);
+                    }, 0.2f);
                 }
-                else if (ModelManager.IsLoose())
+                else if (ModelManager.IsLose())
                 {
-                    Controller = new GameOverController(this);
+                    Scheduler.Add(delegate()
+                    {
+                        Controller = new LoseController(this);
+                    }, 0.2f);
                 }
             }
             else
@@ -93,6 +109,11 @@ namespace Rpg
         }
 
         public void PerformNext()
+        {
+            Scheduler.Add(performNext, 0.2f);
+        }
+
+        private void performNext()
         {
             Character nextPerformer = ModelManager.NextPerformer();
             if (nextPerformer is Player)
