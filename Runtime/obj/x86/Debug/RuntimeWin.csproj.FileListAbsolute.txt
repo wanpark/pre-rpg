@@ -1,0 +1,6 @@
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\bin\x86\Debug\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\bin\x86\Debug\Rpg.Runtime.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Debug\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Debug\Rpg.Runtime.pdb

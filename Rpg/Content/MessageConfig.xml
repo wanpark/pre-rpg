@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Generic="System.Collections.Generic">
+	<Asset Type="Rpg.Pipeline.XmlMessageDescription">
+	<FontDescription>
+		<Reference>#External1</Reference>
+	</FontDescription>
+		<Messages>
+			<Reference>#External2</Reference>
+		</Messages>
+		<DiscardMessage>false</DiscardMessage>
+	</Asset>
+	<ExternalReferences>
+		<ExternalReference ID="#External1" TargetType="Microsoft.Xna.Framework.Content.Pipeline.Graphics.FontDescription">MessageFont.spritefont</ExternalReference>
+		<ExternalReference ID="#External2" TargetType="Generic:Dictionary[string,string]">Message.xml</ExternalReference>
+	</ExternalReferences>
+</XnaContent>

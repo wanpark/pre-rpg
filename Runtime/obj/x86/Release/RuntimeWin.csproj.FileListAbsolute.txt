@@ -1,0 +1,12 @@
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Runtime\bin\x86\Release\Sample.Runtime.dll
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Runtime\bin\x86\Release\Sample.Runtime.pdb
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Runtime\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Runtime\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Runtime\obj\x86\Release\Sample.Runtime.dll
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Runtime\obj\x86\Release\Sample.Runtime.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\bin\x86\Release\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\bin\x86\Release\Rpg.Runtime.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Release\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Runtime\obj\x86\Release\Rpg.Runtime.pdb

@@ -1,0 +1,14 @@
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\bin\x86\Release\Sample.Pipeline.dll
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\bin\x86\Release\Sample.Pipeline.pdb
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\bin\x86\Release\Sample.Runtime.dll
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\bin\x86\Release\Sample.Runtime.pdb
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\obj\x86\Release\Sample.Pipeline.dll
+C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\obj\x86\Release\Sample.Pipeline.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Release\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Release\Rpg.Runtime.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Release\Rpg.Pipeline.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Release\Rpg.Pipeline.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\obj\x86\Release\Rpg.Pipeline.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\obj\x86\Release\Rpg.Pipeline.pdb

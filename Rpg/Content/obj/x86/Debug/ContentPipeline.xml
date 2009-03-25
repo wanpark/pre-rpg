@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>MessageFont.spritefont</Source>
+      <Name>MessageFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\MessageFont.xnb</Output>
+      <Time>2009-03-30T19:23:44.734375+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Message.xml</Source>
+      <Name>Message</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Message.xnb</Output>
+      <Time>2009-03-30T20:01:43.78125+09:00</Time>
+    </Item>
+    <Item>
+      <Source>MessageConfig.xml</Source>
+      <Name>MessageConfig</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>XmlMessageProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\MessageConfig.xnb</Output>
+      <Time>2009-03-30T17:55:44.625+09:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\MessageFont_0.xml</Key>
+        <Value>2009-03-30T19:23:48.453125+09:00</Value>
+      </Dependency>
+      <Dependency>
+        <Key>obj\x86\Debug\Message_0.xml</Key>
+        <Value>2009-03-30T20:01:47.671875+09:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>MessageFont.spritefont</Source>
+      <Importer>FontDescriptionImporter</Importer>
+      <Options>IntermediateFile</Options>
+      <Output>obj\x86\Debug\MessageFont_0.xml</Output>
+      <Time>2009-03-30T19:23:44.734375+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Message.xml</Source>
+      <Importer>XmlImporter</Importer>
+      <Options>IntermediateFile</Options>
+      <Output>obj\x86\Debug\Message_0.xml</Output>
+      <Time>2009-03-30T20:01:43.78125+09:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2009-03-30T19:22:32.78125+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\boy_walk.png</Source>
+      <Name>Characters\boy_walk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\boy_walk.xnb</Output>
+      <Time>2009-03-30T21:36:44.46875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\girl_walk.png</Source>
+      <Name>Characters\girl_walk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\girl_walk.xnb</Output>
+      <Time>2009-03-30T21:36:44.46875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\ninja_walk.png</Source>
+      <Name>Characters\ninja_walk</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\ninja_walk.xnb</Output>
+      <Time>2009-04-02T11:13:50.765625+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\boy_vanish.png</Source>
+      <Name>Characters\boy_vanish</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\boy_vanish.xnb</Output>
+      <Time>2009-03-30T21:36:44.46875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\girl_vanish.png</Source>
+      <Name>Characters\girl_vanish</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\girl_vanish.xnb</Output>
+      <Time>2009-03-30T21:36:44.46875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\ninja_vanish.png</Source>
+      <Name>Characters\ninja_vanish</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\ninja_vanish.xnb</Output>
+      <Time>2009-03-30T21:36:44.46875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>arrow.png</Source>
+      <Name>arrow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\arrow.xnb</Output>
+      <Time>2009-03-31T00:51:16.765625+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Jobs\villager.png</Source>
+      <Name>Jobs\villager</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\villager.xnb</Output>
+      <Time>2009-04-02T17:02:00+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Jobs\witch.png</Source>
+      <Name>Jobs\witch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\witch.xnb</Output>
+      <Time>2009-04-02T15:07:20.625+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\boy_appear.png</Source>
+      <Name>Characters\boy_appear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\boy_appear.xnb</Output>
+      <Time>2009-04-02T16:31:21.6875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\girl_appear.png</Source>
+      <Name>Characters\girl_appear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\girl_appear.xnb</Output>
+      <Time>2009-04-02T16:31:21.6875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Characters\ninja_appear.png</Source>
+      <Name>Characters\ninja_appear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\ninja_appear.xnb</Output>
+      <Time>2009-04-02T16:31:21.6875+09:00</Time>
+    </Item>
+    <Item>
+      <Source>Jobs\villager_female.png</Source>
+      <Name>Jobs\villager_female</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\villager_female.xnb</Output>
+      <Time>2009-04-02T15:07:20.625+09:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Pipeline.dll</Key>
+        <Value>2009-03-30T18:07:22.1875+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2008-10-10T17:42:32+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2008-10-10T17:43:28+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2008-10-10T17:43:18+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2008-10-10T17:48:18+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2008-10-10T17:48:50+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2009-03-29T22:08:40.671875+09:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

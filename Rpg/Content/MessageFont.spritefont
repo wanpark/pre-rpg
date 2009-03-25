@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+このXMLファイルにはコンテント・パイプラインで処理される
+文字フォントに関する情報を記述します。
+各項目のコメントを元にしてゲーム用にカスタマイズしてください。
+-->
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <Asset Type="Graphics:FontDescription">
+
+    <!--
+    使用するフォント名
+    -->
+	  
+    <FontName>MS Gothic</FontName>
+
+	<!--
+    文字フォントのポイントサイズ。浮動小数点で記述する。
+    -->
+    <Size>24</Size>
+
+    <!--
+    ピクセル単位での文字間のスペース指定。
+    -->
+    <Spacing>0</Spacing>
+
+	<!--
+    カーニングの指定。tureを設定した場合、文字の配置にカーニング情報を元に行われます。
+    -->
+	<UseKerning>true</UseKerning>
+	  
+    <!--
+    文字スタイル。通常は"Regular"、ボールドは"Bold", イタリックは"Italic"を指定します。
+    また、"Bold, Italic"と記述することで複数のスタイルを指定できます。
+	スタイルはケースセンシティブなので、大文字小文字の間違いに注意してください。
+    -->
+    <Style>Regular</Style>
+
+	<!--
+	キャラクターリージョン。使う文字の範囲をUnicodeで指定します。
+	既定では 32(ASCIIのスペース)から126('~')の英数字が指定されています。
+    -->
+    <CharacterRegions>
+      <CharacterRegion>
+        <Start>&#32;</Start>
+        <End>&#126;</End>
+      </CharacterRegion>
+    </CharacterRegions>
+  </Asset>
+</XnaContent>

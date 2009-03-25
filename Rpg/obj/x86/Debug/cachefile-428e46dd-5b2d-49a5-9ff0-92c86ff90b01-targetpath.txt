@@ -1,0 +1,17 @@
+Content\MessageFont.xnb
+Content\Message.xnb
+Content\MessageConfig.xnb
+Content\blank.xnb
+Content\Characters\boy_walk.xnb
+Content\Characters\girl_walk.xnb
+Content\Characters\ninja_walk.xnb
+Content\Characters\boy_vanish.xnb
+Content\Characters\girl_vanish.xnb
+Content\Characters\ninja_vanish.xnb
+Content\arrow.xnb
+Content\Jobs\villager.xnb
+Content\Jobs\witch.xnb
+Content\Characters\boy_appear.xnb
+Content\Characters\girl_appear.xnb
+Content\Characters\ninja_appear.xnb
+Content\Jobs\villager_female.xnb

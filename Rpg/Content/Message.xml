@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent xmlns:Generic="System.Collections.Generic">
+  <Asset Type="Generic:Dictionary[string,string]">
+    <Item>
+      <Key>MainMenu.Title</Key>
+      <Value>メインメニュー</Value>
+    </Item>
+    <Item>
+      <Key>MainMenu.Play</Key>
+      <Value>スタート</Value>
+    </Item>
+    <Item>
+      <Key>MainMenu.Option</Key>
+      <Value>オプション</Value>
+    </Item>
+    <Item>
+      <Key>MainMenu.Exit</Key>
+      <Value>おわり</Value>
+    </Item>
+    <Item>
+      <Key>Gameplay.Message</Key>
+      <Value>プレイ画面だよ</Value>
+    </Item>
+    <Item>
+      <Key>Gameplay.Todo</Key>
+      <Value>なにか</Value>
+    </Item>
+  </Asset>
+</XnaContent>

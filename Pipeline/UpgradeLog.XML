@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Pipeline">
+</Property><Property Name="ソリューション ファイル" Value="C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Pipeline.sln">
+</Property><Property Name="Date" Value="2009年3月30日">
+</Property><Property Name="Time" Value="15:15:33">
+</Property></Properties><Event ErrorLevel="0" Project="Pipeline" Source="Pipeline.csproj" Description="プロジェクト ファイルは正常に C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Backup\Pipeline.csproj としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="Properties\AssemblyInfo.cs" Description="ファイルは正常に C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Backup\Properties\AssemblyInfo.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="TextImporter.cs" Description="ファイルは正常に C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Backup\TextImporter.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="TextMessageContent.cs" Description="ファイルは正常に C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Backup\TextMessageContent.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="TextMessageDescription.cs" Description="ファイルは正常に C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Backup\TextMessageDescription.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="TextMessageProcessor.cs" Description="ファイルは正常に C:\Documents and Settings\wanpark\デスクトップ\TextMessagesample (2)\TextMessagesample\Pipeline\Backup\TextMessageProcessor.cs としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="Pipeline.csproj" Description="プロジェクトは正常に変換されました。">
+</Event><Event ErrorLevel="3" Project="Pipeline" Source="Pipeline.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="Pipeline.csproj" Description="スキャンが完了しました: プロジェクト ファイルにアップグレードは必要ありません。">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="Pipeline.csproj" Description="Upgraded XNA Framework Content Pipeline References.">
+</Event><Event ErrorLevel="0" Project="Pipeline" Source="Pipeline.csproj" Description="Upgraded XNA Framework References.">
+</Event></UpgradeLog>
