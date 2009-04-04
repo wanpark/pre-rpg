@@ -19,13 +19,14 @@ namespace Rpg
         }
         private string name;
 
+        public event EventHandler JobMaster;
+
         public List<Command> Commands
         {
             get
             {
                 List<Command> commands = new List<Command>();
-                commands.Add(new AttackCommand(this));
-                //commands.Add(new DefenceCommand(this));
+                commands.Add(Job.Command);
                 return commands;
             }
         }
@@ -35,7 +36,7 @@ namespace Rpg
         public Player(string name, Sex sex, Job job) : base(sex, job)
         {
             this.name = name;
-            expForJob = new Dictionary<Job, int>(new JobEqualityComparer());
+            expForJob = new Dictionary<Job, int>();
         }
 
 
@@ -44,6 +45,22 @@ namespace Rpg
             if (expForJob.ContainsKey(job))
                 return expForJob[job];
             return 0;
+        }
+
+        public void AddExp()
+        {
+            bool mastered = Exp(Job) >= Job.Exp;
+            int exp = expForJob[Job] = Exp(Job) + 1;
+            if (!mastered && exp >= Job.Exp)
+            {
+                OnJobMaster();
+            }
+        }
+
+        protected void OnJobMaster()
+        {
+            if (JobMaster != null)
+                JobMaster(this, EventArgs.Empty);
         }
     }
 }

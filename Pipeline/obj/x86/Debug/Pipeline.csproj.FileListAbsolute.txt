@@ -1,7 +1,7 @@
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Pipeline.dll
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Pipeline.pdb
-C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Runtime.dll
-C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Runtime.pdb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\obj\x86\Debug\Rpg.Pipeline.dll
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\obj\x86\Debug\Rpg.Pipeline.pdb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Pipeline\bin\x86\Debug\Rpg.Runtime.pdb

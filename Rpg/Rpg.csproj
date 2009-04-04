@@ -97,22 +97,22 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\AttackCommand.cs" />
     <Compile Include="Commands\DefenceCommand.cs" />
+    <Compile Include="Commands\CommandManager.cs" />
     <Compile Include="Controllers\CommandSelectController.cs" />
     <Compile Include="Controllers\LeaveController.cs" />
     <Compile Include="Controllers\CommandTargetSelectController.cs" />
     <Compile Include="Controllers\CommandPerformController.cs" />
     <Compile Include="Controllers\GameOverController.cs" />
     <Compile Include="Controllers\EnemyCommandPerformController.cs" />
-    <Compile Include="Controllers\LoseController.cs" />
+    <Compile Include="Controllers\EndBattleController.cs" />
     <Compile Include="Controllers\CoroutineController.cs" />
     <Compile Include="Controllers\CharacterSelectController.cs" />
     <Compile Include="Controllers\JobMenuController.cs" />
     <Compile Include="ICoroutineUpdatable.cs" />
-    <Compile Include="Jobs\Villager.cs" />
-    <Compile Include="Jobs\Witch.cs" />
     <Compile Include="Jobs\JobManager.cs" />
     <Compile Include="Jobs\JobEqualityComparer.cs" />
-    <Compile Include="Jobs\Cat.cs" />
+    <Compile Include="Jobs\JobReader.cs" />
+    <Compile Include="Singleton.cs" />
     <Compile Include="Views\AnimatedTexture.cs" />
     <Compile Include="Controllers\Controller.cs" />
     <Compile Include="Controllers\ActionScheduler.cs" />
@@ -144,6 +144,7 @@
     <Compile Include="Views\Effect\BlinkEffect.cs" />
     <Compile Include="Views\Effect\MoveEffect.cs" />
     <Compile Include="Views\Effect\Effect.cs" />
+    <Compile Include="Views\Effect\LabelEffect.cs" />
     <Compile Include="Views\JobCharacterView.cs" />
     <Compile Include="Views\EnemyView.cs" />
     <Compile Include="Views\ForwardArrowView.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="Views\JobTreeItemView.cs" />
     <Compile Include="Views\JobTreeView.cs" />
     <Compile Include="Views\JobSelectView.cs" />
+    <Compile Include="XmlMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

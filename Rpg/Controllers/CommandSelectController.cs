@@ -8,6 +8,7 @@ namespace Rpg
 {
     class CommandSelectController : Controller
     {
+        private Player performer;
         private CommandSelectView selectView;
 
         public CommandSelectController(ControllerManager controllerManager, Player performer)
@@ -15,6 +16,7 @@ namespace Rpg
         {
             AddViews(ViewManager.Characters);
 
+            this.performer = performer;
             selectView = new CommandSelectView(Screen, (PlayerView)ViewManager.ViewForCharacter(performer));
             Views.Add(selectView);
         }
@@ -40,7 +42,9 @@ namespace Rpg
 
         private void selectTarget()
         {
-            ControllerManager.Controller = new CommandTargetSelectController(ControllerManager, selectView.SelectedCommand(), this);
+            Command command = (Command)selectView.SelectedCommand().Clone();
+            command.Performer = performer;
+            ControllerManager.Controller = new CommandTargetSelectController(ControllerManager, command, this);
         }
 
     }

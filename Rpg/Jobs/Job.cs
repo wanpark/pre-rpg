@@ -38,14 +38,21 @@ namespace Rpg
         }
         private int exp;
 
+        public bool HasSexTexture
+        {
+            get { return hasSexTexture; }
+        }
+        private bool hasSexTexture;
 
-        public Job(string name, Command command, int maxHp, int maxMp, int exp)
+
+        public Job(string name, Command command, int maxHp, int maxMp, int exp, bool hasSexTexture)
         {
             this.name = name;
             this.command = command;
             this.maxHp = maxHp;
             this.maxMp = maxMp;
             this.exp = exp;
+            this.hasSexTexture = hasSexTexture;
         }
 
 
@@ -56,16 +63,11 @@ namespace Rpg
         public string TextureName(Sex sex)
         {
             string textureName = "Jobs/" + name;
-            if (HasSexTexture() && sex == Sex.Female)
+            if (HasSexTexture && sex == Sex.Female)
             {
                 textureName += "_female";
             }
             return textureName;
-        }
-
-        public virtual bool HasSexTexture()
-        {
-            return false;
         }
 
     }

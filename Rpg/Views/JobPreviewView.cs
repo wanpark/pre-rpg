@@ -58,7 +58,7 @@ namespace Rpg
             position = new Vector2(
                 Position.X + frameTexture.Width / 2 - jobTexture.Width / 2,
                 position.Y + 100 - jobTexture.Height);
-            SpriteBatch.Draw(jobTexture, position, Color.White);
+            SpriteBatch.Draw(jobTexture, position, null, Color.White, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
 
             
             position = new Vector2(Position.X + 8, position.Y + jobTexture.Height + 10);

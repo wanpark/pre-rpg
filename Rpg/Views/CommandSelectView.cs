@@ -33,7 +33,7 @@ namespace Rpg
         public override void Draw(GameTime gameTime)
         {
             Vector2 position = new Vector2(
-                playerView.Position.X - frameTexture.Width - 30,
+                playerView.Position.X - frameTexture.Width - 35,
                 playerView.Position.Y - frameTexture.Height
                 );
             SpriteBatch.Draw(frameTexture, position, null, Color.White);

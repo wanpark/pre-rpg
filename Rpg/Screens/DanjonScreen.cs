@@ -30,13 +30,15 @@ namespace Rpg
         public DanjonScreen()
             : base("Danjon")
         {
-            modelManager = new ModelManager();
-            viewManager = new ViewManager(this);
-            controllerManager = new ControllerManager(this);
+            
         }
 
         public override void LoadContent() {
+            JobManager.Instance.LoadContent(ScreenManager.Game.Content);
+            modelManager = ModelManager.Instance;
+            viewManager = new ViewManager(this);
             viewManager.LoadContent();
+            controllerManager = new ControllerManager(this);
             controllerManager.Controller = new StandController(controllerManager);
         }
 

@@ -22,9 +22,21 @@ namespace Rpg
             set { currentView.Position = value; }
         }
 
+        public override Vector2 CharacterPosition
+        {
+            get { return currentView.CharacterPosition; }
+            set { currentView.CharacterPosition = value; }
+        }
+
         public override Vector2 CursorPosition
         {
             get { return currentView.CursorPosition; }
+        }
+
+        public override bool StatusVisible
+        {
+            get { return battleView.StatusVisible; }
+            set { battleView.StatusVisible = value; }
         }
 
         public event EventHandler TransformEnd
@@ -41,6 +53,16 @@ namespace Rpg
 
         private FieldPlayerView fieldView;
         private BattlePlayerView battleView;
+
+        private CharacterView CurrentView
+        {
+            get { return currentView; }
+            set
+            {
+                if (currentView != null) currentView.ClearEffects();
+                currentView = value;
+            }
+        }
         private CharacterView currentView;
 
         public PlayerView(Player player, GameScreen screen, Vector2 position)
@@ -51,85 +73,80 @@ namespace Rpg
 
             fieldView.TransformEnd += onTransformEnd;
 
-            currentView = fieldView;
+            CurrentView = fieldView;
 
             player.Died += onDied;
         }
 
         public override void Update(GameTime gameTime)
         {
-            currentView.Update(gameTime);
+            CurrentView.Update(gameTime);
             base.Update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
-            currentView.Draw(gameTime);
+            CurrentView.Draw(gameTime);
             base.Draw(gameTime);
         }
 
         public void Walk()
         {
             fieldView.Walk();
-            currentView = fieldView;
+            CurrentView = fieldView;
         }
 
         public void Stop()
         {
             fieldView.Stop();
-            currentView = fieldView;
+            CurrentView = fieldView;
         }
 
         public void Transform()
         {
-            if (currentView == battleView || fieldView.IsTransforming())
+            if (CurrentView == battleView || fieldView.IsTransforming())
                 return;
 
             fieldView.Transform();
-            currentView = fieldView;
+            CurrentView = fieldView;
         }
 
         public bool IsTransforming()
         {
-            return currentView == fieldView && fieldView.IsTransforming();
+            return CurrentView == fieldView && fieldView.IsTransforming();
         }
         public bool IsTransformed()
         {
-            return currentView == battleView;
+            return CurrentView == battleView;
         }
 
         private void onTransformEnd(object sender, EventArgs args)
         {
-            currentView = battleView;
+            CurrentView = battleView;
         }
 
         public void Detransform()
         {
-            if (currentView == fieldView)
+            if (CurrentView == fieldView)
                 return;
 
             fieldView.Appear();
-            currentView = fieldView;
+            CurrentView = fieldView;
         }
 
         public bool IsDetransformimg()
         {
-            return currentView == fieldView && fieldView.IsAppearing();
+            return CurrentView == fieldView && fieldView.IsAppearing();
         }
 
         public bool IsDetransformed()
         {
-            return currentView == fieldView && !fieldView.IsAppearing() && !fieldView.IsTransforming();
+            return CurrentView == fieldView && !fieldView.IsAppearing() && !fieldView.IsTransforming();
         }
 
         private void onDied(object sender, EventArgs args)
         {
             //Detransform();
-        }
-
-        public override void Blink()
-        {
-            currentView.Blink();
         }
 
     }

@@ -5,8 +5,6 @@ C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\R
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\obj\x86\Debug\Rpg.exe
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\obj\x86\Debug\Rpg.pdb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\MessageFont.xnb
-C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Rpg.Runtime.dll
-C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Rpg.Runtime.pdb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\obj\x86\Debug\Rpg.Properties.Resources.resources
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\obj\x86\Debug\Rpg.csproj.GenerateResource.Cache
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Message.xnb
@@ -38,3 +36,6 @@ C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\R
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\ninja.xnb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\job_tree_item_frame.xnb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\Cat.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Job.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Rpg.Runtime.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Rpg.Runtime.pdb

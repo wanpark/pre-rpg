@@ -12,7 +12,7 @@ namespace Rpg
         public LeaveController(ControllerManager controllerManager)
             : base(controllerManager)
         {
-            AddViews(ViewManager.Players);
+            AddViews(ViewManager.Characters);
         }
 
         public override IEnumerator<bool> UpdateCoroutine()

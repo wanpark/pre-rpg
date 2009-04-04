@@ -26,6 +26,8 @@ namespace Rpg
             appearEnemy();
             stop();
 
+            setupBattle();
+
             foreach (bool b in this.Sleep(0.3f)) yield return true;
 
             transform();
@@ -34,15 +36,14 @@ namespace Rpg
                 if (!player.IsTransformed())
                     foreach (bool b in this.WaitEvent(player, "TransformEnd")) yield return true;
 
+            ViewManager.Characters.ForEach(character => character.StatusVisible = true);
+
             ControllerManager.PerformNext();
         }
 
         private void stop()
         {
-            foreach (PlayerView player in ViewManager.Players)
-            {
-                player.Stop();
-            }
+            ViewManager.Players.ForEach(player => player.Stop());
         }
 
         private void appearEnemy()
@@ -50,19 +51,18 @@ namespace Rpg
             ModelManager.CreateEnemies();
             ViewManager.CreateEnemies();
 
-            foreach (EnemyView enemy in ViewManager.Enemies)
-            {
-                Views.Add(enemy);
-                enemy.Appear();
-            }
+            AddViews(ViewManager.Enemies);
+            ViewManager.Enemies.ForEach(enemy => enemy.Appear());
+        }
+
+        private void setupBattle()
+        {
+            ModelManager.SetupBattle();
         }
 
         private void transform()
         {
-            foreach (PlayerView player in ViewManager.Players)
-            {
-                player.Transform();
-            }
+            ViewManager.Players.ForEach(player => player.Transform());
         }
 
     }

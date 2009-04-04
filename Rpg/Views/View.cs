@@ -70,6 +70,7 @@ namespace Rpg
 
         public virtual void Draw(GameTime gameTime)
         {
+            effects.ForEach(effect => effect.Draw(gameTime));
         }
 
         public void AddEffect(Effect effect)
@@ -80,6 +81,11 @@ namespace Rpg
         public void RemoveEffect(Effect effect)
         {
             effects.Remove(effect);
+        }
+
+        public void ClearEffects()
+        {
+            effects = new List<Effect>();
         }
 
         public string Message(params string[] keys)

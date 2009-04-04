@@ -14,8 +14,8 @@ namespace Rpg
             get { return "Defence"; }
         }
 
-        public DefenceCommand() : base() { }
-        public DefenceCommand(Character performer) : base(performer) { }
-
+        public override void Perform()
+        {
+        }
     }
 }

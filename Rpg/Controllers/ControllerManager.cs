@@ -72,8 +72,6 @@ namespace Rpg
             CommandEffectView effect = new CommandEffectView(Screen, command, ViewManager.ViewForCharacter(command.Target));
             effect.EffectEnd += effectEnd;
             controller.Views.Add(effect);
-
-            //ViewManager.ViewForCharacter(effect.Command.Performer).Blink();
         }
 
         private void effectEnd(object sender, EventArgs args)
@@ -83,24 +81,9 @@ namespace Rpg
 
             ModelManager.PerformCommand(effect.Command);
 
-            // いろいろ判定
-
             if (ModelManager.IsBattleEnd())
             {
-                if (ModelManager.IsWin())
-                {
-                    Scheduler.Add(delegate()
-                    {
-                        Controller = new LeaveController(this);
-                    }, 0.2f);
-                }
-                else if (ModelManager.IsLose())
-                {
-                    Scheduler.Add(delegate()
-                    {
-                        Controller = new LoseController(this);
-                    }, 0.2f);
-                }
+                Controller = new EndBattleController(this);
             }
             else
             {
@@ -109,12 +92,6 @@ namespace Rpg
         }
 
         public void PerformNext()
-        {
-            //Scheduler.Add(performNext, 0.2f);
-            performNext();
-        }
-
-        private void performNext()
         {
             Character nextPerformer = ModelManager.NextPerformer();
             if (nextPerformer is Player)

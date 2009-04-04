@@ -49,7 +49,7 @@ namespace Rpg.Pipeline
             // TypeReader自体はゲーム本体で定義しても動作するが、その場合、ゲームによって
             // この文字列を変更しないといけないので使い回しが利かない、この問題を回避する為に
             // 面倒でもRuntimeプロジェクトを別に作って置くのが良い。
-            return "Rpg.Runtime.XmlMessageReader,Rpg.Runtime";
+            return "Rpg.XmlMessageReader,Rpg";
         }
     }
 

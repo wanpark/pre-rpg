@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+
+using Rpg.Runtime;
+
 namespace Rpg
 {
     class JobManager
@@ -10,42 +15,39 @@ namespace Rpg
 
         public static JobManager Instance
         {
-            get { return instance; }
+            get { return Singleton<JobManager>.Instance; }
         }
-        private static readonly JobManager instance = new JobManager();
 
 
         public List<Job> Jobs
         {
-            get { return jobsForType.Values.ToList<Job>(); }
+            get { return jobsForName.Values.ToList<Job>(); }
         }
 
-        private Dictionary<Type, Job> jobsForType;
+        private Dictionary<string, Job> jobsForName;
 
         private JobManager()
         {
-            jobsForType = new Dictionary<Type, Job>();
+        }
 
-            Job<Villager>();
-            Job<Witch>();
-            Job<Cat>();
+        public void LoadContent(ContentManager content)
+        {
+            jobsForName = new Dictionary<string, Job>();
+            foreach (JobContent info in content.Load<List<JobContent>>("Job"))
+            {
+                AddJob(new Job(info.Name, CommandManager.Instance.Command(info.CommandName), info.MaxHp, info.MaxMp, info.Exp, info.HasSexTexture));
+            }
         }
 
 
-        public Job Job<T>()
-            where T : Job
+        public Job Job(String name)
         {
-            Type type = typeof(T);
-            if (!jobsForType.ContainsKey(type))
-                AddJob<T>();
-            return jobsForType[type];
+            return jobsForName[name];
         }
 
-        private void AddJob<T>()
-            where T : Job
+        private void AddJob(Job job)
         {
-            Type type = typeof(T);
-            jobsForType.Add(type, (Job)Activator.CreateInstance(type));
+            jobsForName.Add(job.Name, job);
         }
 
 

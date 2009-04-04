@@ -19,8 +19,14 @@ namespace Rpg
         public BattlePlayerView(Player player, GameScreen screen, Vector2 position)
             : base(player, screen, position, true)
         {
+            player.JobMaster += onJobMaster;
         }
 
+        private void onJobMaster(object sender, EventArgs args)
+        {
+            Vector2 position = new Vector2(Position.X - 20, Position.Y - 80);
+            AddEffect(new LabelEffect(this, "Master!", position, Color.Black));
+        }
         
     }
 }

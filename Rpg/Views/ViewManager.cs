@@ -64,7 +64,7 @@ namespace Rpg
             int y = 100;
             foreach (Player player in ModelManager.Players)
             {
-                players.Add(new PlayerView(player, Screen, new Vector2(320, y)));
+                players.Add(new PlayerView(player, Screen, new Vector2(300, y)));
                 y += 100;
             }
         }
@@ -80,7 +80,7 @@ namespace Rpg
             int y = 100;
             foreach (Enemy enemy in ModelManager.Enemies)
             {
-                enemies.Add(new EnemyView(enemy, Screen, new Vector2(80, y)));
+                enemies.Add(new EnemyView(enemy, Screen, new Vector2(100, y)));
                 y += 100;
             }
         }

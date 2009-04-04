@@ -32,16 +32,40 @@ namespace Rpg
         }
         private Sex sex;
 
+        public abstract Party Party
+        {
+            get;
+        }
+
+
         public bool Alive
         {
             get { return alive; }
         }
         private bool alive;
 
-        public abstract Party Party
+
+        public int Hp
         {
-            get;
+            get { return hp; }
         }
+        private int hp;
+
+        public int Mp
+        {
+            get { return mp; }
+        }
+        private int mp;
+
+        public int MaxHp
+        {
+            get { return job.MaxHp; }
+        }
+        public int MaxMp
+        {
+            get { return job.MaxMp; }
+        }
+
 
         public event EventHandler Died;
         public event EventHandler JobChanged;
@@ -53,13 +77,6 @@ namespace Rpg
             ResetStatus();
         }
 
-        public void Die()
-        {
-            alive = false;
-            if (Died != null)
-                Died(this, EventArgs.Empty);
-        }
-
         protected void OnJobChanged()
         {
             if (JobChanged != null)
@@ -69,6 +86,29 @@ namespace Rpg
         public void ResetStatus()
         {
             alive = true;
+            hp = job.MaxHp;
+            mp = job.MaxMp;
+        }
+
+
+        public void Die()
+        {
+            if (!alive)
+                return;
+
+            alive = false;
+            if (Died != null)
+                Died(this, EventArgs.Empty);
+        }
+
+        public void Damage(int ammount)
+        {
+            hp -= ammount;
+            if (hp <= 0)
+            {
+                hp = 0;
+                Die();
+            }
         }
     }
 }

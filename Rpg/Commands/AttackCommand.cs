@@ -13,9 +13,10 @@ namespace Rpg
             get { return "Attack"; }
         }
 
-        public AttackCommand() : base() { }
-        public AttackCommand(Character performer) : base(performer) { }
 
-
+        public override void Perform()
+        {
+            Target.Damage(10);
+        }
     }
 }

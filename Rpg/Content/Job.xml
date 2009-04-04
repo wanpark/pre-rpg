@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <Asset Type="System.Collections.Generic.List[Rpg.Runtime.JobContent]">
+    <Item>
+      <Name>Villager</Name>
+      <CommandName>Attack</CommandName>
+      <MaxHp>20</MaxHp>
+      <MaxMp>0</MaxMp>
+      <Exp>2</Exp>
+      <HasSexTexture>true</HasSexTexture>
+    </Item>
+    <Item>
+      <Name>Witch</Name>
+      <CommandName>Defence</CommandName>
+      <MaxHp>15</MaxHp>
+      <MaxMp>20</MaxMp>
+      <Exp>3</Exp>
+      <HasSexTexture>false</HasSexTexture>
+    </Item>
+    <Item>
+      <Name>Cat</Name>
+      <CommandName>Defence</CommandName>
+      <MaxHp>10</MaxHp>
+      <MaxMp>5</MaxMp>
+      <Exp>3</Exp>
+      <HasSexTexture>false</HasSexTexture>
+    </Item>
+  </Asset>
+</XnaContent>

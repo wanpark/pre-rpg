@@ -80,7 +80,7 @@
     <Reference Include="Microsoft.Xna.Framework.Game, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
     <Reference Include="Rpg.Runtime, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Runtime\bin\x86\Release\Rpg.Runtime.dll</HintPath>
+      <HintPath>..\Runtime\bin\x86\Debug\Rpg.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>False</Private>
@@ -92,6 +92,7 @@
     <Compile Include="XmlMessageDescription.cs" />
     <Compile Include="XmlMessageContent.cs" />
     <Compile Include="XmlMessageProcessor.cs" />
+    <Compile Include="JobWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -15,7 +15,12 @@ namespace Rpg
     class ModelManager
     {
 
-        private Character performer;
+        public static ModelManager Instance
+        {
+            get { return Singleton<ModelManager>.Instance; }
+        }
+
+        private int performerIndex;
 
         public List<Player> Players
         {
@@ -42,12 +47,14 @@ namespace Rpg
             }
         }
 
-        public ModelManager()
+        private ModelManager()
         {
             players = new List<Player>();
-            players.Add(new Player("boy", Sex.Male, JobManager.Instance.Job<Villager>()));
-            players.Add(new Player("girl", Sex.Female, JobManager.Instance.Job<Villager>()));
-            players.Add(new Player("ninja", Sex.Male, JobManager.Instance.Job<Villager>()));
+            players.Add(new Player("boy", Sex.Male, JobManager.Instance.Job("Villager")));
+            players.Add(new Player("girl", Sex.Female, JobManager.Instance.Job("Villager")));
+            players.Add(new Player("ninja", Sex.Male, JobManager.Instance.Job("Villager")));
+
+            performerIndex = 5;
         }
 
         public void ResetPlayerStatus()
@@ -61,35 +68,64 @@ namespace Rpg
         public List<Enemy> CreateEnemies()
         {
             enemies = new List<Enemy>();
-            enemies.Add(new Enemy(JobManager.Instance.Job<Witch>()));
-            enemies.Add(new Enemy(JobManager.Instance.Job<Witch>()));
-            enemies.Add(new Enemy(JobManager.Instance.Job<Witch>()));
+            enemies.Add(new Enemy(JobManager.Instance.Job("Witch")));
+            enemies.Add(new Enemy(JobManager.Instance.Job("Witch")));
+            enemies.Add(new Enemy(JobManager.Instance.Job("Witch")));
             return enemies;
+        }
+
+        public void SetupBattle()
+        {
+            Characters.ForEach(character => character.ResetStatus());
+        }
+
+        private void FinalizeBattle()
+        {
+            if (IsWin())
+            {
+                foreach (Player player in players)
+                {
+                    if (player.Alive)
+                        player.AddExp();
+                }
+            }
+
         }
 
         public Character NextPerformer()
         {
             List<Character> characters = Characters;
-            int current = performer != null ? characters.IndexOf(performer) : characters.Count - 1;
             for (int i = 1; i < characters.Count; i++)
             {
-                Character character = characters[(current + i) % characters.Count];
+                int index = (performerIndex + i) % characters.Count;
+                Character character = characters[index];
                 if (character.Alive)
-                    return performer = character;
+                {
+                    performerIndex = index;
+                    return character;
+                }
             }
             return null;
         }
 
-        public void PerformCommand(Command command)
-        {
-            command.Target.Die();
-        }
-
         public Command CreateEnemyCommand(Enemy enemy)
         {
-            Command command = new AttackCommand(enemy);
-            command.Target = players.Find(delegate(Player player) { return player.Alive; });
+            Command command = (Command)enemy.Job.Command.Clone();
+            command.Performer = enemy;
+            Player target = null;
+            do
+            {
+                target = players[new Random().Next(players.Count)];
+            } while (!target.Alive);
+            command.Target = target;
             return command;
+        }
+
+        public void PerformCommand(Command command)
+        {
+            command.Perform();
+            if (IsBattleEnd())
+                FinalizeBattle();
         }
 
         public bool IsBattleEnd()

@@ -6,12 +6,12 @@ using System.Text;
 namespace Rpg
 {
 
-    abstract class Command
+    class Command : ICloneable
     {
 
-        public abstract string Name
+        public virtual string Name
         {
-            get;
+            get { return "Empty"; }
         }
 
         public Character Performer
@@ -33,16 +33,14 @@ namespace Rpg
         {
         }
 
-        public Command(Character performer)
-            : this()
+        public object Clone()
         {
-            this.performer = performer;
+            Command clone = (Command)Activator.CreateInstance(this.GetType());
+            clone.Target = Target;
+            clone.Performer = Performer;
+            return clone;
         }
 
-        public Command(Character performer, Character target)
-            : this(performer)
-        {
-            this.target = target;
-        }
+        public virtual void Perform() { }
     }
 }

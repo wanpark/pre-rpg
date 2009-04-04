@@ -121,9 +121,9 @@ namespace Rpg
         {
             if (!Visible) return;
 
-            base.Draw(gameTime);
-
             currentTexture.DrawFrame(SpriteBatch, Position);
+
+            base.Draw(gameTime);
         }
 
     }

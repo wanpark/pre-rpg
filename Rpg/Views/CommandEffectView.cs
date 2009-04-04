@@ -21,7 +21,6 @@ namespace Rpg
 
         private CharacterView characterView;
         private float elapsed;
-        private Vector2 originPosition;
         private bool active;
 
         public event EventHandler EffectEnd;
@@ -32,9 +31,8 @@ namespace Rpg
             this.command = command;
             this.characterView = characterView;
 
-            originPosition = characterView.Position;
             int diff = (command.Target is Player) ? 10 : -10;
-            characterView.Position = new Vector2(originPosition.X + diff, originPosition.Y);
+            characterView.CharacterPosition = new Vector2(diff, 0);
             elapsed = 0;
             active = true;
         }
@@ -55,7 +53,7 @@ namespace Rpg
             }
             else if (elapsed >= TIME_PER_FRAME)
             {
-                characterView.Position = originPosition;
+                characterView.CharacterPosition = Vector2.Zero;
             }
 
             base.Update(gameTime);

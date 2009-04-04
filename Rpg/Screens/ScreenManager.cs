@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Rpg.Runtime;
+//using Rpg.Runtime;
 #endregion
 
 namespace Rpg

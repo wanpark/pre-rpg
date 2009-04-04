@@ -58,26 +58,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rpg.exe" size="68608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rpg.exe" size="72704">
       <assemblyIdentity name="Rpg" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>dVna8T1Uo2wmAc1OhnHtHIuiLNk=</dsig:DigestValue>
+        <dsig:DigestValue>i7VJ0VHEKbPd92pAbvOh+l9zdV8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rpg.Runtime.dll" size="4608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rpg.Runtime.dll" size="4096">
       <assemblyIdentity name="Rpg.Runtime" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HnzEM+HXLs2XjYDbL+i1xISbk2k=</dsig:DigestValue>
+        <dsig:DigestValue>pNWnQxAWAu8UbpSlZJFqK6VpCAQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -225,6 +225,15 @@
       <dsig:DigestValue>xlx5F5t5kX/5TcWwDSxPdjfG+hw=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\Job.xnb" size="267">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ba7pgKnxvruiB11IEwHLmk2SqIs=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\job_preview_frame.xnb" size="100085">
     <hash>
       <dsig:Transforms>
@@ -252,7 +261,7 @@
       <dsig:DigestValue>rAHCOHIx0P3Hi+E/VvdCvi/EDcI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Jobs\villager.xnb" size="7765">
+  <file name="Content\Jobs\Villager.xnb" size="7765">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
@@ -261,7 +270,7 @@
       <dsig:DigestValue>JPK1eCfTaYsZZbEnuh9ofk0ytmk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Jobs\villager_female.xnb" size="7765">
+  <file name="Content\Jobs\Villager_female.xnb" size="7765">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
@@ -270,7 +279,7 @@
       <dsig:DigestValue>yOitgganqOOOUXWdMnCMfUAbXC4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Jobs\witch.xnb" size="20821">
+  <file name="Content\Jobs\Witch.xnb" size="20821">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
@@ -279,22 +288,22 @@
       <dsig:DigestValue>YwEhH1IO8t/mmakQ561fZhqQtdE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Message.xnb" size="998">
+  <file name="Content\Message.xnb" size="797">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>isZPIyUPx6/lPr5nyZdvy4W8eiU=</dsig:DigestValue>
+      <dsig:DigestValue>siTsgOnD3acBtatsmEwPZ7pCdBk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\MessageConfig.xnb" size="25655">
+  <file name="Content\MessageConfig.xnb" size="24639">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>sXP8z7MsXw+3ozxV/VLnI7oVP7s=</dsig:DigestValue>
+      <dsig:DigestValue>zmkBHFdXk+dBePMsaOiV9MstJuI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\MessageFont.xnb" size="13282">

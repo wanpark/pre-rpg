@@ -2,30 +2,6 @@
 <XnaContent xmlns:Generic="System.Collections.Generic">
   <Asset Type="Generic:Dictionary[string,string]">
     <Item>
-      <Key>MainMenu.Title</Key>
-      <Value>メインメニュー</Value>
-    </Item>
-    <Item>
-      <Key>MainMenu.Play</Key>
-      <Value>スタート</Value>
-    </Item>
-    <Item>
-      <Key>MainMenu.Option</Key>
-      <Value>オプション</Value>
-    </Item>
-    <Item>
-      <Key>MainMenu.Exit</Key>
-      <Value>おわり</Value>
-    </Item>
-    <Item>
-      <Key>Gameplay.Message</Key>
-      <Value>プレイ画面だよ</Value>
-    </Item>
-    <Item>
-      <Key>Gameplay.Todo</Key>
-      <Value>なにか</Value>
-    </Item>
-    <Item>
       <Key>CommandMenu.Prefix</Key>
       <Value>！</Value>
     </Item>
@@ -35,7 +11,7 @@
     </Item>
     <Item>
       <Key>Command.Attack.Description</Key>
-      <Value>１人に物理攻撃</Value>
+      <Value>１人にダメージ</Value>
     </Item>
     <Item>
       <Key>Command.Defence.Name</Key>
@@ -43,7 +19,7 @@
     </Item>
     <Item>
       <Key>Command.Defence.Description</Key>
-      <Value>物理ダメージを軽減</Value>
+      <Value>ダメージを軽減</Value>
     </Item>
     <Item>
       <Key>JobMenu.Title</Key>

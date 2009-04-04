@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Rpg
 {
-    abstract class Effect
+    class Effect
     {
 
         public View View
@@ -28,7 +28,11 @@ namespace Rpg
             this.view = view;
         }
 
-        public abstract void Update(GameTime gameTime);
+        public virtual void Update(GameTime gameTime)
+        { }
+
+        public virtual void Draw(GameTime gameTime)
+        { }
 
     }
 }
