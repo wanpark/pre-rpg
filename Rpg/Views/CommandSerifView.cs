@@ -41,7 +41,7 @@ namespace Rpg
 
         private string CommandLabel()
         {
-            return Message("Command", command.Name);
+            return Message("Command", command.Name, "Name");
         }
 
         

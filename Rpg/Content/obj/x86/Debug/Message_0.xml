@@ -26,12 +26,52 @@
       <Value>なにか</Value>
     </Item>
     <Item>
-      <Key>Command.Attack</Key>
+      <Key>CommandMenu.Prefix</Key>
+      <Value>！</Value>
+    </Item>
+    <Item>
+      <Key>Command.Attack.Name</Key>
       <Value>こうげき</Value>
     </Item>
     <Item>
-      <Key>Command.Defence</Key>
+      <Key>Command.Attack.Description</Key>
+      <Value>１人に物理攻撃</Value>
+    </Item>
+    <Item>
+      <Key>Command.Defence.Name</Key>
       <Value>まもる</Value>
+    </Item>
+    <Item>
+      <Key>Command.Defence.Description</Key>
+      <Value>物理ダメージを軽減</Value>
+    </Item>
+    <Item>
+      <Key>JobMenu.Title</Key>
+      <Value>クラスせんたく</Value>
+    </Item>
+    <Item>
+      <Key>Job.Villager.Name</Key>
+      <Value>村人</Value>
+    </Item>
+    <Item>
+      <Key>Job.Villager.Description</Key>
+      <Value>たたかいなんておっかない</Value>
+    </Item>
+    <Item>
+      <Key>Job.Witch.Name</Key>
+      <Value>魔女</Value>
+    </Item>
+    <Item>
+      <Key>Job.Witch.Description</Key>
+      <Value>ニシンのパイてどんなあじ？</Value>
+    </Item>
+    <Item>
+      <Key>Job.Cat.Name</Key>
+      <Value>ねこ</Value>
+    </Item>
+    <Item>
+      <Key>Job.Cat.Description</Key>
+      <Value>魔女と仲がいいらしい</Value>
     </Item>
   </Asset>
 </XnaContent>

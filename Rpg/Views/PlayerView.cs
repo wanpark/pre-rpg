@@ -22,6 +22,11 @@ namespace Rpg
             set { currentView.Position = value; }
         }
 
+        public override Vector2 CursorPosition
+        {
+            get { return currentView.CursorPosition; }
+        }
+
         public event EventHandler TransformEnd
         {
             add { fieldView.TransformEnd += value; }

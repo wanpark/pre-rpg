@@ -104,13 +104,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Jobs\villager_female.png">
-      <Name>villager_female</Name>
+    <Compile Include="Jobs\Villager_female.png">
+      <Name>Villager_female</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Jobs\witch.png">
-      <Name>witch</Name>
+    <Compile Include="Jobs\Witch.png">
+      <Name>Witch</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -133,8 +133,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Jobs\villager.png">
-      <Name>villager</Name>
+    <Compile Include="Jobs\Villager.png">
+      <Name>Villager</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -156,6 +156,46 @@
   <ItemGroup>
     <Compile Include="serif_frame.png">
       <Name>serif_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\boy.png">
+      <Name>boy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\girl.png">
+      <Name>girl</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Characters\ninja.png">
+      <Name>ninja</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="job_preview_frame.png">
+      <Name>job_preview_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="job_tree_item_frame.png">
+      <Name>job_tree_item_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Jobs\Cat.png">
+      <Name>Cat</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -11,6 +11,11 @@ namespace Rpg
     class FieldPlayerView : CharacterView
     {
 
+        public override Vector2 CursorPosition
+        {
+            get { return new Vector2(Position.X - 25, Position.Y - 20); }
+        }
+
         const float WALK_TIME_PER_FRAME = 0.2f;
         const float VANISH_TIME_PER_FRAME = 0.1f;
 

@@ -82,9 +82,13 @@ namespace Rpg
             effects.Remove(effect);
         }
 
-        public string Message(string group, string name)
+        public string Message(params string[] keys)
         {
-            return screen.ScreenManager.Message(group, name);
+            return screen.ScreenManager.Message(keys);
+        }
+        public string Message(string name)
+        {
+            return screen.ScreenManager.Message(name);
         }
 
     }

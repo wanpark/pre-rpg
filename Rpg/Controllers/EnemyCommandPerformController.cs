@@ -12,20 +12,22 @@ namespace Rpg
     class EnemyCommandPerformController : Controller
     {
 
+        private Enemy enemy;
         private Command command;
         private CommandSerifView serifView;
 
         public EnemyCommandPerformController(ControllerManager controllerManager, Enemy enemy)
             : base(controllerManager)
         {
-            this.command = ModelManager.CreateEnemyCommand(enemy);
-
+            this.enemy = enemy;
             AddViews(ViewManager.Characters);
         }
 
         public override void  Begin()
         {
  	        base.Begin();
+
+            this.command = ModelManager.CreateEnemyCommand(enemy);
             Scheduler.Add(say, 0.2f);
             Scheduler.Add(delegate() { ControllerManager.PerformCommand(command); }, 0.6f);
         }

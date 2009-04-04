@@ -16,6 +16,11 @@ namespace Rpg
         }
         private Texture2D texture;
 
+        public override Vector2 CursorPosition
+        {
+            get { return new Vector2(Position.X - 40, Position.Y - 40); }
+        }
+
         private SpriteEffects mirroring;
 
         public JobCharacterView(Character character, GameScreen screen, Vector2 position, bool isMirrorTexture)
@@ -23,6 +28,8 @@ namespace Rpg
         {
             mirroring = isMirrorTexture ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             LoadContent();
+
+            Character.JobChanged += (sender, args) => LoadContent();
         }
 
         public void LoadContent()

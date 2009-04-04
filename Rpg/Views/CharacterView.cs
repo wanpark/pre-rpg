@@ -7,13 +7,19 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Rpg
 {
-    class CharacterView :View
+    abstract class CharacterView :View
     {
         public Character Character
         {
             get { return character; }
         }
         private Character character;
+
+        public abstract Vector2 CursorPosition
+        {
+            get;
+        }
+
 
         public CharacterView(Character character, Vector2 position, GameScreen screen)
             : base(screen, position)

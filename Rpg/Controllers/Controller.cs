@@ -11,12 +11,12 @@ namespace Rpg
     class Controller
     {
 
-        public List<View> Views
+        public HashSet<View> Views
         {
             get { return views; }
             protected set { views = value; }
         }
-        private List<View> views;
+        private HashSet<View> views;
 
         protected DanjonScreen Screen
         {
@@ -47,7 +47,7 @@ namespace Rpg
         public Controller(ControllerManager controllerManager)
         {
             this.controllerManager = controllerManager;
-            views = new List<View>();
+            views = new HashSet<View>();
         }
 
         public virtual void Begin() {}
@@ -78,7 +78,7 @@ namespace Rpg
             batch.End();
         }
 
-        public void AddViews<T>(List<T> views)
+        public void AddViews<T>(ICollection<T> views)
             where T : View
         {
             foreach (T view in views)

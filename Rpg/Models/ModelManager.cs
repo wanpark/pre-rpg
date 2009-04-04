@@ -8,8 +8,8 @@ namespace Rpg
 
     public enum Party
     {
-        Players,
-        Enemies
+        Player,
+        Enemy
     }
 
     class ModelManager
@@ -45,9 +45,9 @@ namespace Rpg
         public ModelManager()
         {
             players = new List<Player>();
-            players.Add(new Player("boy", Sex.Male, new Villager()));
-            players.Add(new Player("girl", Sex.Female, new Villager()));
-            players.Add(new Player("ninja", Sex.Male, new Villager()));
+            players.Add(new Player("boy", Sex.Male, JobManager.Instance.Job<Villager>()));
+            players.Add(new Player("girl", Sex.Female, JobManager.Instance.Job<Villager>()));
+            players.Add(new Player("ninja", Sex.Male, JobManager.Instance.Job<Villager>()));
         }
 
         public void ResetPlayerStatus()
@@ -61,9 +61,9 @@ namespace Rpg
         public List<Enemy> CreateEnemies()
         {
             enemies = new List<Enemy>();
-            enemies.Add(new Enemy(new Job("witch")));
-            enemies.Add(new Enemy(new Job("witch")));
-            enemies.Add(new Enemy(new Job("witch")));
+            enemies.Add(new Enemy(JobManager.Instance.Job<Witch>()));
+            enemies.Add(new Enemy(JobManager.Instance.Job<Witch>()));
+            enemies.Add(new Enemy(JobManager.Instance.Job<Witch>()));
             return enemies;
         }
 

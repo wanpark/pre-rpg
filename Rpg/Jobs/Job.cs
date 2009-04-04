@@ -14,10 +14,38 @@ namespace Rpg
         }
         private string name;
 
+        public Command Command
+        {
+            get { return command; }
+        }
+        private Command command;
 
-        public Job(string name)
+        public int MaxHp
+        {
+            get { return maxHp; }
+        }
+        private int maxHp;
+
+        public int MaxMp
+        {
+            get { return maxMp; }
+        }
+        private int maxMp;
+
+        public int Exp
+        {
+            get { return exp; }
+        }
+        private int exp;
+
+
+        public Job(string name, Command command, int maxHp, int maxMp, int exp)
         {
             this.name = name;
+            this.command = command;
+            this.maxHp = maxHp;
+            this.maxMp = maxMp;
+            this.exp = exp;
         }
 
 

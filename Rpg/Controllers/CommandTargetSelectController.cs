@@ -6,60 +6,33 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Rpg
 {
-    class CommandTargetSelectController : Controller
+    class CommandTargetSelectController : CharacterSelectController
     {
 
         private Command command;
         private CommandSelectController commandSelectController;
 
-        private CommandTargetSelectView selectView;
-
         public CommandTargetSelectController(ControllerManager controllerManager, Command command, CommandSelectController commandSelectController)
-            : base(controllerManager)
+            : base(controllerManager, CharacterSelectType.One)
         {
             this.command = command;
             this.commandSelectController = commandSelectController;
 
             AddViews(ViewManager.Characters);
 
-            selectView = new CommandTargetSelectView(Screen, ViewManager.Players, ViewManager.Enemies);
-            Views.Add(selectView);
+            Selected += performCommand;
+            Cancelled += commandReselect;
+
+            SelectCharacter(ModelManager.Enemies[0]);
         }
 
-        public override void HandleInput(InputState input)
+        private void performCommand(object sender, EventArgs args)
         {
-            base.HandleInput(input);
-
-            if (input.IsNewKeyPress(Keys.Up))
-            {
-                selectView.SelectPrevious();
-            }
-            if (input.IsNewKeyPress(Keys.Down))
-            {
-                selectView.SelectNext();
-            }
-            if (input.IsNewKeyPress(Keys.Left) || input.IsNewKeyPress(Keys.Right))
-            {
-                selectView.SelectOtherParty();
-            }
-
-            if (input.IsNewKeyPress(Keys.X))
-            {
-                performCommand();
-            }
-            else if (input.IsNewKeyPress(Keys.Z))
-            {
-                commandReselect();
-            }
-        }
-
-        private void performCommand()
-        {
-            command.Target = selectView.SelectedTarget();
+            command.Target = SelectedCharacter();
             ControllerManager.Controller = new CommandPerformController(ControllerManager, command);
         }
 
-        private void commandReselect()
+        private void commandReselect(object sender, EventArgs args)
         {
             ControllerManager.Controller = commandSelectController;
         }

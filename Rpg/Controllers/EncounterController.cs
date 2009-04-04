@@ -31,13 +31,8 @@ namespace Rpg
             transform();
 
             foreach (PlayerView player in ViewManager.Players)
-            {
                 if (!player.IsTransformed())
-                {
-                    Type type = typeof(PlayerView);
                     foreach (bool b in this.WaitEvent(player, "TransformEnd")) yield return true;
-                }
-            }
 
             ControllerManager.PerformNext();
         }

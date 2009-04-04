@@ -8,6 +8,11 @@ namespace Rpg
     class Enemy : Character
     {
 
+        public override Party Party
+        {
+            get { return Party.Enemy; }
+        }
+
         public Enemy(Job job)
             : base(Sex.Male, job)
         {

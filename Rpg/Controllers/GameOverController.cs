@@ -15,11 +15,7 @@ namespace Rpg
         public GameOverController(ControllerManager controllerManager)
             : base(controllerManager)
         {
-            Views = new List<View>();
-            foreach (View view in ViewManager.Characters)
-            {
-                Views.Add(view);
-            }
+            AddViews(ViewManager.Characters);
         }
 
         public override void Draw(GameTime gameTime)

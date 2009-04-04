@@ -110,7 +110,8 @@ namespace Rpg
 
         public void PerformNext()
         {
-            Scheduler.Add(performNext, 0.2f);
+            //Scheduler.Add(performNext, 0.2f);
+            performNext();
         }
 
         private void performNext()

@@ -28,5 +28,13 @@ C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\R
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\command_frame.xnb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\cursor.xnb
 C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\serif_frame.xnb
-C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\lua51.dll
-C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\LuaInterface.dll
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Rpg.exe.manifest
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Rpg.application
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\obj\x86\Debug\Rpg.exe.manifest
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\obj\x86\Debug\Rpg.application
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\job_preview_frame.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\boy.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\girl.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Characters\ninja.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\job_tree_item_frame.xnb
+C:\Documents and Settings\wanpark\My Documents\Visual Studio 2008\Projects\Rpg\Rpg\bin\x86\Debug\Content\Jobs\Cat.xnb

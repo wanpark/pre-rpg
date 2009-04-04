@@ -297,9 +297,14 @@ namespace Rpg
         }
 
 
-        public string Message(string group, string name)
+        public string Message(params string[] keys)
         {
-            return xmlMessage.Messages[group + "." + name];
+            return Message(String.Join(".", keys));
+        }
+
+        public string Message(string key)
+        {
+            return xmlMessage.Messages[key];
         }
 
 

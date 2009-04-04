@@ -9,7 +9,8 @@ namespace Rpg
     {
 
 
-        public Villager() : base("villager")
+        public Villager()
+            : base("Villager", new AttackCommand(), 20, 0, 3)
         {
         }
 

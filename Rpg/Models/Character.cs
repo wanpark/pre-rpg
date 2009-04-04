@@ -12,12 +12,17 @@ namespace Rpg
         Female
     }
 
-    class Character
+    abstract class Character
     {
 
         public Job Job
         {
             get { return job; }
+            set
+            {
+                job = value;
+                OnJobChanged();
+            }
         }
         private Job job;
 
@@ -33,8 +38,13 @@ namespace Rpg
         }
         private bool alive;
 
+        public abstract Party Party
+        {
+            get;
+        }
 
         public event EventHandler Died;
+        public event EventHandler JobChanged;
 
         public Character(Sex sex, Job job)
         {
@@ -48,6 +58,12 @@ namespace Rpg
             alive = false;
             if (Died != null)
                 Died(this, EventArgs.Empty);
+        }
+
+        protected void OnJobChanged()
+        {
+            if (JobChanged != null)
+                JobChanged(this, EventArgs.Empty);
         }
 
         public void ResetStatus()

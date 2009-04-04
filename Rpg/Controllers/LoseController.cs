@@ -6,13 +6,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Rpg
 {
-    class LoseController : LeaveController
+    class LoseController : CoroutineController
     {
 
         public LoseController(ControllerManager controllerManager)
             : base(controllerManager)
         {
-            AddViews(ViewManager.Enemies);
+            AddViews(ViewManager.Characters);
         }
 
         public override IEnumerator<bool> UpdateCoroutine()
@@ -21,13 +21,8 @@ namespace Rpg
 
             foreach (bool b in this.Sleep(0.8f)) yield return true;
 
-            IEnumerator<bool> leave = leaveUpdateCoroutine();
+            IEnumerator<bool> leave = new LeaveController(ControllerManager).UpdateCoroutine();
             while (leave.MoveNext()) yield return true;
-        }
-
-        private IEnumerator<bool> leaveUpdateCoroutine()
-        {
-            return base.UpdateCoroutine();
         }
 
     }
